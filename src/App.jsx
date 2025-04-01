@@ -4,13 +4,13 @@ import './styles.css';
 
 import App from './App';
 
-function App() {
-  const [count, setCount] = useState(0)
+function Square() {
+  return <button className="square">1</button>;
 }
 
 export default function Board() {
-  //...
-}  return (
+  // ...
+}
     <>
       <div className="board-row">
         <button className="square">1</button>
