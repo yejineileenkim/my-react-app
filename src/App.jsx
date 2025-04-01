@@ -1,14 +1,22 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import './styles.css';
+import { useState } from 'react';
 
-import App from './App';
+function Square() {
+  const [value, setValue] = useState(null);
 
-function Square({ value }) {
-  return <button className="square">value</button>;
+  function handleClick() {
+    setValue('X');
+  }
+
+  return (
+    <button
+      className="square"
+      onClick={handleClick}
+    >
+      {value}
+    </button>
+  );
 }
 
-// ...
 export default function Board() {
   return (
     <>
@@ -30,4 +38,3 @@ export default function Board() {
     </>
   );
 }
-
